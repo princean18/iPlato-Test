@@ -34,6 +34,18 @@ namespace iPlato_Test
             var query = from x in dbEntities.PROFESSIONS
                         select new { x.NAME, x.DOB, x.PROFESSION1 };
 
+            //viewModelData = new ViewModelData
+            //{
+            //    ProfessionList = new List<ProfessionDataGrid>()
+            //    {
+            //        new ProfessionDataGrid
+            //        {
+            //            Name = "Prince",
+            //            DOB = "28/05/1994",
+            //            Profession = "Developer",
+            //        },
+            //    }
+            //};
 
             List<ProfessionDataGrid> ProfessionList = query.Select(
                                                         c => new ProfessionDataGrid

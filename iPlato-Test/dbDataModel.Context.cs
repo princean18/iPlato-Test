@@ -25,6 +25,6 @@ namespace iPlato_Test
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<PROFESSION> PROFESSIONS { get; set; }
+        public DbSet<PROFESSION> PROFESSIONs { get; set; }
     }
 }

@@ -5,16 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iPlato_Test"
         mc:Ignorable="d"
-        Title="iPlato Test Application" Height="450" Width="800">
-    <Grid Margin="0,0,-0.4,115">
-        <DataGrid ItemsSource="{Binding ProfessionList}"
-                      AutoGenerateColumns="False"
-                      Grid.Row="1">
+        Title="iPlato Test Application" Height="450" Width="800" Background="#FF919191">
+
+    <Grid Background="#ffffff">
+
+        <DataGrid IsReadOnly="True" Name="DataGridMain" ItemsSource="{Binding ProfessionList}" AutoGenerateColumns="False" Margin="0,218,252.6,1" SelectionChanged="DataGridMain_SelectionChanged">
+            <DataGrid.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.AppWorkspaceColorKey}}"/>
+            </DataGrid.BorderBrush>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>           
-                <DataGridTextColumn Header="DOB" Width="*" Binding="{Binding DOB}"/>           
-                <DataGridTextColumn Header="Profession" Width="*" Binding="{Binding Profession}"/>
+                <DataGridTextColumn Visibility="Hidden" Header="ID" Width="300" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Name" Width="300" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="DOB" Width="*" Binding="{Binding DOB}"/>
+                <!--<DataGridTextColumn Header="Profession" Width="*" Binding="{Binding Profession}"/>-->
+                <!--<DataGridTextColumn Header="Actions" Width="100"/>-->
+                <DataGridTemplateColumn Header="Actions" Width="105">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnEdit" Content="Edit" Height="Auto" Width="50" Margin="1"></Button>
+                                <Button x:Name="btnDelete" Content="Delete" Height="Auto" Width="50" Margin="1" Click="onClickDelete"></Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="Add new record" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="108,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom" />
+        <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxDOB" HorizontalAlignment="Left" Height="23" Margin="108,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
+        <Label Content="Profession" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxProf" HorizontalAlignment="Left" Height="23" Margin="108,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
+        <Button Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="75" Background="#FF0014A8" Foreground="White" FontWeight="Bold" Height="27" BorderBrush="#FF0014A8" Click="saveBtn_Click" />
+        <Label Name="ProfessionDataLbl" Content="data" HorizontalAlignment="Left" Margin="609,218,0,0" VerticalAlignment="Top"/>
+        <Label Name="ProfessionLbl" Content="Profession:" HorizontalAlignment="Left" Margin="546,218,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -34,14 +34,14 @@
         </DataGrid>
         <Label Content="Add/Edit New Record" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Padding="0,5,5,5"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
-        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="108,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom" />
+        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="108,38,0,0" TextWrapping="NoWrap" MaxLength="250" VerticalAlignment="Top" Width="179" VerticalContentAlignment="Bottom" />
         <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
-        <TextBox Name="TextBoxDOB" HorizontalAlignment="Left" Height="23" Margin="108,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
+        <TextBox Name="TextBoxDOB" HorizontalAlignment="Left" Height="23" Margin="108,66,0,0" TextWrapping="NoWrap" MaxLength="15" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
         <Label Content="Profession" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
-        <TextBox Name="TextBoxProf" HorizontalAlignment="Left" Height="23" Margin="108,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
+        <TextBox Name="TextBoxProf" HorizontalAlignment="Left" Height="23" Margin="108,94,0,0" TextWrapping="NoWrap" MaxLength="100" VerticalAlignment="Top" Width="179" VerticalContentAlignment="Bottom"/>
         <Button Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="75" Background="#FF0014A8" Foreground="White" FontWeight="Bold" Height="27" BorderBrush="#FF0014A8" Click="saveBtn_Click" />
         <Label Name="DetailsLbl" Content="Profession" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Padding="0"/>
-        <Label Name="MandatoryLbl" Content="All fields are mandatory" HorizontalAlignment="Left" Margin="90,126,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="10"/>
+        <Label Name="MandatoryLbl" Content="All fields are mandatory!" HorizontalAlignment="Left" Margin="90,126,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="10"/>
         <TextBox Visibility="Hidden" Name="HiddenId" HorizontalAlignment="Left" Height="23" Margin="242,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="45"/>
     </Grid>
 </Window>

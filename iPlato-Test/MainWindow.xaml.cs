@@ -158,6 +158,11 @@ namespace iPlato_Test
 
         private void onClickEdit(object sender, RoutedEventArgs e)
         {
+            MandatoryLbl.Visibility = Visibility.Hidden;
+            TextBoxName.BorderBrush = Brushes.Gray;
+            TextBoxDOB.BorderBrush = Brushes.Gray;
+            TextBoxProf.BorderBrush = Brushes.Gray;
+
             ProfessionDataGrid selectedRow = (ProfessionDataGrid)DataGridMain.SelectedItem;
 
             if (selectedRow != null)

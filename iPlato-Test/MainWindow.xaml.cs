@@ -26,7 +26,7 @@ namespace iPlato_Test
         {
             
             InitializeComponent();
-            ProfessionDataLbl.Visibility = Visibility.Hidden;
+            DetailsLbl.Visibility = Visibility.Hidden;
             MandatoryLbl.Visibility = Visibility.Hidden;
             LoadDataGridMain();
         }
@@ -131,12 +131,12 @@ namespace iPlato_Test
             
             if (selectedRow != null)
             {
-                ProfessionDataLbl.Visibility = Visibility.Visible;
-                ProfessionDataLbl.Content = "Profession: " + selectedRow.Profession;
+                DetailsLbl.Visibility = Visibility.Visible;
+                DetailsLbl.Content = "Date of Birth: " + selectedRow.DOB + " ~ Profession: " + selectedRow.Profession;
             }
             else
             {
-                ProfessionDataLbl.Visibility = Visibility.Hidden;
+                DetailsLbl.Visibility = Visibility.Hidden;
                 MandatoryLbl.Visibility = Visibility.Hidden;
             }
         }
@@ -162,7 +162,7 @@ namespace iPlato_Test
 
             if (selectedRow != null)
             {
-                ProfessionDataLbl.Visibility = Visibility.Visible;
+                DetailsLbl.Visibility = Visibility.Visible;
                 HiddenId.Text = selectedRow.ID.ToString();
                 TextBoxName.Text = selectedRow.Name;
                 TextBoxDOB.Text = selectedRow.DOB;

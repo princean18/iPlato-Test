@@ -172,10 +172,10 @@
       <LastGenOutput>dbDataModel.cs</LastGenOutput>
     </Content>
     <Content Include="Test_DB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test_DB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Test_DB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

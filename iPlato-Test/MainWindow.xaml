@@ -15,11 +15,11 @@
             </DataGrid.BorderBrush>
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Header="ID" Width="300" Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="Name" Width="300" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Date of Birth" Width="*" Binding="{Binding DOB}"/>
+                <DataGridTextColumn Header="Name" Width="500" Binding="{Binding Name}"/>
+                <!--<DataGridTextColumn Header="Date of Birth" Width="*" Binding="{Binding DOB}"/>-->
                 <!--<DataGridTextColumn Header="Profession" Width="*" Binding="{Binding Profession}"/>-->
                 <!--<DataGridTextColumn Header="Actions" Width="100"/>-->
-                <DataGridTemplateColumn Header="Actions" Width="105">
+                <DataGridTemplateColumn Header="Actions" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -39,7 +39,7 @@
         <Label Content="Profession" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
         <TextBox Name="TextBoxProf" HorizontalAlignment="Left" Height="23" Margin="108,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
         <Button Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="75" Background="#FF0014A8" Foreground="White" FontWeight="Bold" Height="27" BorderBrush="#FF0014A8" Click="saveBtn_Click" />
-        <Label Name="ProfessionDataLbl" Content="Profession" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
+        <Label Name="DetailsLbl" Content="Profession" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
         <Label Name="MandatoryLbl" Content="All fields are mandatory" HorizontalAlignment="Left" Margin="90,138,0,0" VerticalAlignment="Top" Foreground="Red"/>
         <TextBox Visibility="Hidden" Name="HiddenId" HorizontalAlignment="Left" Height="23" Margin="242,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="45"/>
     </Grid>

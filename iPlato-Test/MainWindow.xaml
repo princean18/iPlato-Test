@@ -34,7 +34,7 @@
         </DataGrid>
         <Label Content="Add/Edit New Record" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Padding="0,5,5,5"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
-        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="108,38,0,0" TextWrapping="NoWrap" MaxLength="250" VerticalAlignment="Top" Width="179" VerticalContentAlignment="Bottom" />
+        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="108,38,0,0" TextWrapping="NoWrap" MaxLength="250" VerticalAlignment="Top" Width="179" VerticalContentAlignment="Bottom" /> 
         <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>
         <TextBox Name="TextBoxDOB" HorizontalAlignment="Left" Height="23" Margin="108,66,0,0" TextWrapping="NoWrap" MaxLength="15" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Bottom"/>
         <Label Content="Profession" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Padding="0,5,5,5"/>

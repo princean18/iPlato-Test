@@ -21,11 +21,9 @@ namespace iPlato_Test
     ///      
     public partial class MainWindow : Window
     {
-        //private readonly ViewModelData viewModelData;
 
         public MainWindow()
         {
-
             
             InitializeComponent();
             ProfessionLbl.Visibility = Visibility.Hidden;
@@ -106,7 +104,7 @@ namespace iPlato_Test
             {
                 ProfessionLbl.Visibility = Visibility.Hidden;
                 ProfessionDataLbl.Visibility = Visibility.Hidden;
-            }            
+            }
         }
 
         private void onClickDelete(object sender, RoutedEventArgs e)

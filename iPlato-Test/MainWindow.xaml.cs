@@ -24,7 +24,6 @@ namespace iPlato_Test
 
         public MainWindow()
         {
-            
             InitializeComponent();
             DetailsLbl.Visibility = Visibility.Hidden;
             MandatoryLbl.Visibility = Visibility.Hidden;
@@ -57,7 +56,7 @@ namespace iPlato_Test
                 ProfessionList = ProfessionList
             };
 
-            this.DataContext = viewModelData;
+            DataContext = viewModelData;
         }
 
         private void saveBtn_Click(object sender, RoutedEventArgs e)
@@ -89,8 +88,7 @@ namespace iPlato_Test
 
             viewModelData = new ViewModelData
             {
-                ProfessionList = new List<ProfessionDataGrid>()
-                    {
+                ProfessionList = new List<ProfessionDataGrid>(){
                         new ProfessionDataGrid
                         {
                             Name = textBoxName,
@@ -173,7 +171,6 @@ namespace iPlato_Test
                 TextBoxDOB.Text = selectedRow.DOB;
                 TextBoxProf.Text = selectedRow.Profession;
             }
-
         }
 
     }
